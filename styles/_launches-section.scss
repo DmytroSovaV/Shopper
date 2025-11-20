@@ -1,0 +1,129 @@
+.launches-section{
+    background-color: var(--save-icon-purple);
+    color: var(--main-white);
+    h2{
+        padding: 120px 0;
+        background-color: var(--main-white);
+        color: var(--main-black);
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 600;
+        font-size: 44px;
+    }
+    &__items{
+        padding: 72px 0;
+        display: flex;
+    }
+
+    &__product{
+        display: flex;
+        align-items:flex-start;
+        justify-content: center;
+        gap: 82px;
+    }
+    &__product-img{
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+        align-items: center;
+
+        img{
+            max-width: 238px;
+            height: 418px;
+            border-radius: 179px;
+            object-fit: cover;
+            position: relative;
+        }
+        img:nth-child(1n+2){
+            transform:translateY(50px);
+
+
+        }
+    }
+    &__product-info{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        span{
+            font-size: 31px;
+            font-weight: 600;
+        }
+    }
+    &__product-info-name{
+        font-size: 60px;
+    }
+    &__product-info-desc{
+        font-weight: 500;
+        // font-size: 21px;
+    }
+    .price{
+        font-weight: 400;
+    }
+    &__product-info-colors{
+        display: flex;
+        gap: 31px;
+        align-items: center;
+        
+        button{
+            width: 43px;
+            height: 43px;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }
+        button:first-child{
+            border: 1px solid var(--red);
+            background-color: var(--main-black);
+            
+        }
+        button:nth-child(1n+2){
+            background-color: var(--yellow);
+        }
+        button:nth-child(1n+3){
+            background-color: var(--blue);
+        }
+    }
+
+    &__product-info-buttons{
+        display: flex;
+        align-items: center;
+        gap: 77px;
+    }
+    a:hover{
+        opacity: 0.5;
+    }
+    button:hover{
+        color: var(--main-white);
+        border-color: var(--main-white);
+    }
+   
+    .swiper-slide{
+        flex-shrink: 0 !important;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        padding: 15px;
+        
+        background-color: var(--main-green);
+        border-radius: 50%;
+        color: var(--main-white);
+        
+        
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after{
+        font-size: 8px !important;
+        color: var(--main-white) !important;
+        
+
+    }
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover{
+       transform: scale(1.1);
+   
+}
+button:focus{
+    border: 2px solid var(--main-white) !important;
+}
+
+}
