@@ -3,21 +3,38 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 53px 0;
+        padding: 20px 0;
+        @media screen and (min-width:$bp-tablet) {
+            padding: 53px 0;
+            
+        }
+        align-items: center;
     }
     &__search-input{
-        width: 322px;
-        height: 63px;
+        width: 165px;
+        height: 65px;
         box-shadow: 0px 15px 50px 0px #2E839E12;
         border-radius: 10px;
         border: transparent;
         padding: 15px;
         position: relative;
+        display: none;
+        @media screen and (min-width:$bp-desktop) {
+            width: 322px;
+        }
+        @media screen and (min-width:$bp-tablet) {
+            display: block;
+            // border: 1px solid var(--main-green);
+        }
     }
     &__logo{
         font-style: italic;
         font-weight: 400;
-        font-size: 21px;
+        font-size: 15px;
+
+        @media screen and(min-width:$bp-mobileL) {
+            font-size: 21px;
+        }
     }
     .color-main-green{
         color: var(--main-green);
@@ -25,25 +42,59 @@
     &__buttons{
         display: flex;
         flex-direction: row;
-        gap: 23px;
+        gap: 10px;
+        @media screen and (min-width:$bp-tablet) {
+            gap: 23px;
+            
+        }
     }
     &__basket,
-    &__auth{
+    &__auth,
+    &__search{
        display: flex;
        flex-direction: row;
        align-items: center;
        gap: 15px; 
-       padding: 15px 34px;
+       padding: 15px 15px;
        background-color: transparent;
        border-radius: 30px;
        border: 1px solid var(--main-green);
        cursor: pointer;
-        font-size: 16px;
+       font-size: 16px;
         font-weight: 500;
-            svg {
-                fill: var(--main-green);
-            }
+        // p{
+        //     display: block;
+        //     @media screen and (min-width:$bp-mobileL) {
+        //             display: none;
+        // }
+        svg {  
+            width: 12px;
+            height: 12px;
+            
+            fill: var(--main-green);
+            @media screen and (min-width:$bp-mobileL) {
+                width: 24px;
+                height: 24px;
+                }
+        }
+        
+        @media screen and (min-width:$bp-desktop) {
+            padding: 15px 34px;
+        }
     }
+    &__search{
+        display: flex;
+        @media screen and (min-width:$bp-tablet) {
+            display: none;  
+        }
+    }
+        &__basket p,
+        &__auth p{
+            display: none;
+            @media screen and (min-width:$bp-tablet) {
+                display: block;
+            }
+        }
 
     &__auth{
         background-color: var(--main-green);
@@ -91,9 +142,12 @@
         width: 38px;
         height: 38px;
         border-radius: 5px;
-        right: 18px;
+        right: 10px;
         top: 12px;
-
+        display: none;
+        @media screen and(min-width:$bp-tablet) {
+            display: block;
+        }
         svg{
             fill: var(--main-white);
         }
@@ -117,10 +171,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 75px;
-            font-size: 20px;
+            gap: 25px;
+            font-size: 15px;
             font-weight: 600;
             padding: 28px 0;
+            @media screen and (min-width:$bp-mobileM) {
+                font-size: 18px;
+                gap: 25px;
+                
+            }
+            @media screen and (min-width:$bp-tablet) {
+                font-size: 20px;
+                gap: 75px;
+                
+            }
         }
 
         a:hover{

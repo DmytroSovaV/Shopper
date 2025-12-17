@@ -1,13 +1,23 @@
 .hero-section{
-    font-size: 21px;
+    font-size: 16px;
+    @media screen and (min-width: 768px) {
+            font-size: 21px;
+        }
     padding-top: 70px;
 
     &__container{
         display: flex;
-        flex-direction: row;
-        gap: 175px;
+        flex-direction: column;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
         // justify-content: space-between;
         align-items: center;
+        @media screen and (min-width:$bp-desktop) {
+            gap: 175px;
+            flex-direction: row;
+            
+        }
     }
 
     h2{
@@ -20,7 +30,12 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
+            @media screen and (min-width:$bp-desktop) {
+                margin-bottom: 100px;
+                
+                }
+
         }
         button{
             margin-top: 20px;
@@ -35,8 +50,13 @@
         gap: 5px;
         img{
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 30px;
+            height: 30px;
+            @media screen and (min-width:$bp-tablet) {
+                width: 60px;
+                height: 60px;
+                
+            }
             object-fit: cover;
             margin-right: -20px;
             border: 2px solid var(--main-white);
@@ -49,10 +69,15 @@
 
     &__propose{
         display: flex;
-        flex-direction: row;
+        flex-direction: column-reverse;
         align-items: flex-end;
         position: relative;
-        gap: 62px;
+        gap: 63px;
+        @media screen and (min-width:$bp-desktop) {
+            flex-direction: row;
+            gap: 15px;
+            
+            }
     }
     &__propose-img::after{
         position: absolute;
@@ -80,7 +105,7 @@
         align-items: center;
         
         img{
-            width: 280px;
+            width: 250px;
             height: 289px;
         }
         div{
@@ -100,12 +125,17 @@
     }
     &__play-video a{
         position: absolute;
-        left: -58px;
-        bottom: 140px;
+        left: 85px;
+        bottom: 50px;
         display: flex;
         flex-direction: column;
         z-index: 3;
-
+        @media screen and (min-width:$bp-desktop) {
+            left: -70px;
+            bottom: 140px;
+            
+        }
     }
+    
     
 }

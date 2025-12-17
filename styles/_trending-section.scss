@@ -11,21 +11,31 @@
         h2 {
             font-weight: 600;
             font-size: 44px;
+            text-align: center;
         }
     
     &__category {
         display: flex;
-        gap: 54px;
+        gap: 25px;
         background-color: transparent;
+        @media screen and(min-width:$bp-tablet) {
+            gap: 54px;
+            
+        }
 
         button {
             font-weight: 600;
-            font-size: 26px;
+            font-size: 16px;
             border: transparent;
             background-color: transparent;
             cursor: pointer;
             padding: 0;
+            color: var(--main-black);
             border-radius: 50%;
+            @media screen and (min-width:$bp-tablet) {
+                font-size: 26px;
+                
+            }
 
         }
     }
@@ -57,7 +67,6 @@
 
         &__items {
             padding-top: 38px;
-            margin-left: 38px;
             // display: block;
             // gap: 93px;
         }
@@ -79,6 +88,7 @@
             flex-direction: column;
             align-items: center;
             gap: 30px;
+            width: 364px;
     
             div img {
                 max-width: 250px;
@@ -90,6 +100,7 @@
             padding: 30px 21px 18px 21px;
             display: flex;
             flex-direction: column;
+            width: 364px;
             align-items: center;
             // background-color: var(--card-bg-green);
             border-radius: 15px;
@@ -129,6 +140,7 @@
     
         .button {
             padding: 22px 119px;
+            width: 364px;
         }
     
     
